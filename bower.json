@@ -16,6 +16,7 @@
   "dependencies": {
     "marked": "~0.2.10",
     "jquery": "~2.0.3",
-    "ractive": "~0.3.8"
+    "ractive": "~0.3.8",
+    "uritemplate": "*"
   }
 }
