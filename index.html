@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel='stylesheet' href='css/main.css'></link>
+</head>
+<body>
+  <script src='bower_components/jquery/jquery.min.js'></script>
+  <script src='bower_components/ractive/build/Ractive.min.js'></script>
+  <script src='bower_components/marked/lib/marked.js'></script>
+  <script id='template' type='text/ractive'>
+    {{#pr}}
+      <section>
+        <header>
+          <h1>PR #{{number}}: {{title}}</h1>
+          <p>{{body}}</p>
+        </header>
+        <h2>Comments:</h2>
+        {{#comment_list:n}}
+          <div class='comment'>
+            Comment #{{n+1}}:
+            <div class='comment-body'>
+              {{{ marked(body) }}}
+            </div>
+            {{#user}}
+              - <a href='{{html_url}}'>@{{login}}</a> on <time>{{ formatDate(created_at) }}</time>
+            {{/user}}
+          <div>
+        {{/comment_list}}
+      </section>
+    {{/pr}}
+  </script>
+  <script src='js/main.js'></script>
+</body>
+</html>

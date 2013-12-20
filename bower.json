@@ -1,0 +1,21 @@
+{
+  "name": "github-api",
+  "version": "0.0.0",
+  "authors": [
+    "Tom Crockett <pelotom@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "marked": "~0.2.10",
+    "jquery": "~2.0.3",
+    "ractive": "~0.3.8"
+  }
+}
