@@ -2,8 +2,7 @@
   "name": "web",
   "active": true,
   "events": [
-    "push",
-    "pull_request"
+    "push"
   ],
   "config": {
     "url": "http://ec2-23-22-212-138.compute-1.amazonaws.com/",
